@@ -36,6 +36,7 @@ namespace ArduinoFrec_Control
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,11 @@ namespace ArduinoFrec_Control
             // 
             // onButton
             // 
-            this.onButton.BackColor = System.Drawing.SystemColors.Control;
+            this.onButton.BackColor = System.Drawing.Color.ForestGreen;
+            this.onButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.onButton.FlatAppearance.BorderSize = 100;
+            this.onButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.onButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.onButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.onButton.Location = new System.Drawing.Point(24, 131);
             this.onButton.Name = "onButton";
@@ -53,6 +58,7 @@ namespace ArduinoFrec_Control
             this.onButton.TabIndex = 1;
             this.onButton.Text = "Encender";
             this.onButton.UseVisualStyleBackColor = false;
+            this.onButton.Click += new System.EventHandler(this.onButton_Click);
             // 
             // numericUpDown1
             // 
@@ -60,14 +66,30 @@ namespace ArduinoFrec_Control
             this.numericUpDown1.Cursor = System.Windows.Forms.Cursors.Default;
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.Location = new System.Drawing.Point(157, 135);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(45, 29);
             this.numericUpDown1.TabIndex = 2;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(24, 26);
             this.textBox1.Name = "textBox1";
@@ -78,7 +100,8 @@ namespace ArduinoFrec_Control
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(24, 62);
             this.textBox2.Multiline = true;
@@ -90,11 +113,20 @@ namespace ArduinoFrec_Control
     " se puede realizar la reducción de la frecuencia de la señal en una razón de 1-1" +
     "0";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(205, 201);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
+            this.dateTimePicker1.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 209);
+            this.ClientSize = new System.Drawing.Size(406, 233);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.numericUpDown1);
@@ -117,6 +149,7 @@ namespace ArduinoFrec_Control
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 
