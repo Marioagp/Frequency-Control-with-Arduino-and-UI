@@ -15,6 +15,12 @@ namespace ArduinoFrec_Control
         public Form1()
         {
             InitializeComponent();
+            serialPort1.Open(); //inicializes and opens the serial port in the runtime
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
