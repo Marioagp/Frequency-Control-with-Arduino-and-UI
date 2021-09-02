@@ -18,11 +18,6 @@ namespace ArduinoFrec_Control
             serialPort1.Open(); //inicializa el puerto serie al iniciarse el programa
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             
@@ -31,9 +26,16 @@ namespace ArduinoFrec_Control
         private void onButton_Click(object sender, EventArgs e)
         {
             //enviar datos al arduino con el click del botón
-            int div = Convert.ToInt32(numericUpDown1.Value); // se convierte a int el valor que devuelve el numericUpDown que es decimal
-            
+
+            string div = "I" + Convert.ToInt32(numericUpDown1.Value); //La I para decirle al Arduino que inicie y el valor de 
+                                                                      // ToInt32(numericUpDown1.Value) con el int convertido a string con el 
+                                                                      // valor a cargar
+                                                                      //int div = Convert.ToInt32(numericUpDown1.Value); // se convierte a int el valor que devuelve el numericUpDown que es decimal
+            serialPort1.Write(div);                                   //enviando datos por el puerto serial, el cambio del string to int se hace en el Arduino
             
         }
     }
+
 }
+
+
