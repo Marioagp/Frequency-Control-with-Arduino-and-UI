@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ArduinoFrec_Control
 {
     public partial class Form1 : Form
@@ -32,10 +33,19 @@ namespace ArduinoFrec_Control
                                                                       // valor a cargar
                                                                       //int div = Convert.ToInt32(numericUpDown1.Value); // se convierte a int el valor que devuelve el numericUpDown que es decimal
             serialPort1.Write(div);                                   //enviando datos por el puerto serial, el cambio del string to int se hace en el Arduino
-            
+
+            string Val;
+            Val = numericUpDown1.Value.ToString();    //convertir a sring la salida decimal de numericDown1
+            label_Valor_Div.Text = Val;               //mostrar el valor en el label
+
+            Numerical_Useful int_to_BCD = new Numerical_Useful(); //creando un objeto de tipo Numerical_Useful
+            string m = int_to_BCD.IntToBinary(Convert.ToInt32 (numericUpDown1.Value)); //llamando a la instancia IntToBCD4
+            //label_Valor_Div.Text = "I" + m;  //visualizando la salida en el label
         }
     }
 
+    
 }
+
 
 

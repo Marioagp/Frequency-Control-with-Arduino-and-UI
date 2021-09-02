@@ -37,6 +37,8 @@ namespace ArduinoFrec_Control
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label_Valor_Div = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,16 +118,36 @@ namespace ArduinoFrec_Control
             // dateTimePicker1
             // 
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(205, 201);
+            this.dateTimePicker1.Location = new System.Drawing.Point(196, 265);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
             this.dateTimePicker1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 182);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "La frecuencia de entrada es dividida por un factor de:";
+            // 
+            // label_Valor_Div
+            // 
+            this.label_Valor_Div.AutoSize = true;
+            this.label_Valor_Div.Location = new System.Drawing.Point(291, 182);
+            this.label_Valor_Div.Name = "label_Valor_Div";
+            this.label_Valor_Div.Size = new System.Drawing.Size(13, 13);
+            this.label_Valor_Div.TabIndex = 7;
+            this.label_Valor_Div.Text = "--";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 233);
+            this.ClientSize = new System.Drawing.Size(406, 297);
+            this.Controls.Add(this.label_Valor_Div);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -150,6 +172,8 @@ namespace ArduinoFrec_Control
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_Valor_Div;
     }
 }
 
