@@ -39,6 +39,7 @@ namespace ArduinoFrec_Control
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label_Valor_Div = new System.Windows.Forms.Label();
+            this.Offbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,7 +119,7 @@ namespace ArduinoFrec_Control
             // dateTimePicker1
             // 
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(196, 265);
+            this.dateTimePicker1.Location = new System.Drawing.Point(205, 274);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
             this.dateTimePicker1.TabIndex = 5;
@@ -126,7 +127,7 @@ namespace ArduinoFrec_Control
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 182);
+            this.label1.Location = new System.Drawing.Point(24, 232);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(260, 13);
             this.label1.TabIndex = 6;
@@ -135,17 +136,34 @@ namespace ArduinoFrec_Control
             // label_Valor_Div
             // 
             this.label_Valor_Div.AutoSize = true;
-            this.label_Valor_Div.Location = new System.Drawing.Point(291, 182);
+            this.label_Valor_Div.Location = new System.Drawing.Point(291, 231);
             this.label_Valor_Div.Name = "label_Valor_Div";
             this.label_Valor_Div.Size = new System.Drawing.Size(13, 13);
             this.label_Valor_Div.TabIndex = 7;
             this.label_Valor_Div.Text = "--";
+            // 
+            // Offbutton
+            // 
+            this.Offbutton.BackColor = System.Drawing.Color.Red;
+            this.Offbutton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Offbutton.FlatAppearance.BorderSize = 100;
+            this.Offbutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Offbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Offbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Offbutton.Location = new System.Drawing.Point(24, 172);
+            this.Offbutton.Name = "Offbutton";
+            this.Offbutton.Size = new System.Drawing.Size(108, 35);
+            this.Offbutton.TabIndex = 8;
+            this.Offbutton.Text = "Apagar";
+            this.Offbutton.UseVisualStyleBackColor = false;
+            this.Offbutton.Click += new System.EventHandler(this.Offbutton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 297);
+            this.Controls.Add(this.Offbutton);
             this.Controls.Add(this.label_Valor_Div);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
@@ -174,7 +192,7 @@ namespace ArduinoFrec_Control
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label_Valor_Div;
-
+        private System.Windows.Forms.Button Offbutton;
     }
 }
 
