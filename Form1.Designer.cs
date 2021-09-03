@@ -174,6 +174,7 @@ namespace ArduinoFrec_Control
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label_Valor_Div;
+
     }
 }
 
