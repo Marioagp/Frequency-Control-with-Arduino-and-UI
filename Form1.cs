@@ -30,12 +30,20 @@ namespace ArduinoFrec_Control
             Numerical_Useful int_to_BCD = new Numerical_Useful(); //creando un objeto de tipo Numerical_Useful
             string m = int_to_BCD.IntToBinary(Convert.ToInt32(numericUpDown1.Value)); //llamando a la instancia IntToBCD4
             
-            serialPort1.Write(m);  //enviando datos por el puerto serial, el cambio del string to int se hace en el Arduino
+            serialPort1.Write("E" + m);  //enviando datos por el puerto serial, el cambio del string to int se hace en el Arduino
 
             string Val;
             Val = numericUpDown1.Value.ToString();    //convertir a sring la salida decimal de numericDown1
             label_Valor_Div.Text = Val;               //mostrar el valor en el label
             //label_Valor_Div.Text = "I" + m;  //visualizando la salida en el label
+
+        }
+
+        private void Offbutton_Click(object sender, EventArgs e)
+        {
+            label_Valor_Div.Text = "APAGADO";
+            string m = "A";
+            serialPort1.Write(m); //enviando datos por el puerto serial, apagando las salidas P0-P3 y la señal de LOAD
 
         }
     }
