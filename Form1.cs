@@ -26,7 +26,7 @@ namespace ArduinoFrec_Control
 
         private void onButton_Click(object sender, EventArgs e)
         {
-            //enviar datos al arduino con el click del botón
+            //enviar datos al arduino con el click del botón ENCENDER
             Numerical_Useful int_to_BCD = new Numerical_Useful(); //creando un objeto de tipo Numerical_Useful
             string m = int_to_BCD.IntToBinary(10 - Convert.ToInt32(numericUpDown1.Value)); //llamando a la instancia IntToBCD4, el
                                                                                            //valor del factor de division se cuenta desde el valor
