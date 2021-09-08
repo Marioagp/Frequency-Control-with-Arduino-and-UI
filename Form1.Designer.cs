@@ -55,7 +55,7 @@ namespace ArduinoFrec_Control
             this.onButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.onButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.onButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.onButton.Location = new System.Drawing.Point(24, 131);
+            this.onButton.Location = new System.Drawing.Point(16, 116);
             this.onButton.Name = "onButton";
             this.onButton.Size = new System.Drawing.Size(108, 35);
             this.onButton.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace ArduinoFrec_Control
             this.numericUpDown1.BackColor = System.Drawing.SystemColors.Menu;
             this.numericUpDown1.Cursor = System.Windows.Forms.Cursors.Default;
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(157, 135);
+            this.numericUpDown1.Location = new System.Drawing.Point(153, 119);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10,
             0,
@@ -93,33 +93,32 @@ namespace ArduinoFrec_Control
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(24, 26);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(16, 20);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(324, 30);
+            this.textBox1.Size = new System.Drawing.Size(378, 26);
             this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Aplicación de Control de Frecuencia";
+            this.textBox1.Text = "Reducción de la Tasa de repetición de pulsos";
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.MenuBar;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(24, 62);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(16, 62);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(324, 56);
+            this.textBox2.Size = new System.Drawing.Size(346, 48);
             this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "Esta es una simple aplicación para controlar la frecuencia de salida de un laser," +
-    " se puede realizar la reducción de la frecuencia de la señal en una razón de 1-1" +
-    "0";
+            this.textBox2.Text = "Elija el valor entre el cual se desea dividir la tasa de repetición de los pulsos" +
+    ":";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(205, 274);
+            this.dateTimePicker1.Location = new System.Drawing.Point(214, 278);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(198, 20);
             this.dateTimePicker1.TabIndex = 5;
@@ -127,18 +126,20 @@ namespace ArduinoFrec_Control
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 232);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(13, 226);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(260, 13);
+            this.label1.Size = new System.Drawing.Size(323, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "La frecuencia de entrada es dividida por un factor de:";
             // 
             // label_Valor_Div
             // 
             this.label_Valor_Div.AutoSize = true;
-            this.label_Valor_Div.Location = new System.Drawing.Point(291, 231);
+            this.label_Valor_Div.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Valor_Div.Location = new System.Drawing.Point(354, 226);
             this.label_Valor_Div.Name = "label_Valor_Div";
-            this.label_Valor_Div.Size = new System.Drawing.Size(13, 13);
+            this.label_Valor_Div.Size = new System.Drawing.Size(16, 16);
             this.label_Valor_Div.TabIndex = 7;
             this.label_Valor_Div.Text = "--";
             // 
@@ -150,7 +151,7 @@ namespace ArduinoFrec_Control
             this.Offbutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Offbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Offbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Offbutton.Location = new System.Drawing.Point(24, 172);
+            this.Offbutton.Location = new System.Drawing.Point(16, 159);
             this.Offbutton.Name = "Offbutton";
             this.Offbutton.Size = new System.Drawing.Size(108, 35);
             this.Offbutton.TabIndex = 8;
@@ -162,7 +163,7 @@ namespace ArduinoFrec_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 297);
+            this.ClientSize = new System.Drawing.Size(417, 305);
             this.Controls.Add(this.Offbutton);
             this.Controls.Add(this.label_Valor_Div);
             this.Controls.Add(this.label1);

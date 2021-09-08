@@ -15,5 +15,5 @@ namespace ArduinoFrec_Control
             binary = binary.Remove(0,1);  //se elmina el primer digito quedando de la forma de nipple (4 char en este caso)
             return binary;                //si el nuemro fuera "4" binary = "100" se pierde el primero por eso se suma 16 y se quita despues
         }
-    }
+    }       
 }
